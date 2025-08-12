@@ -149,7 +149,7 @@ export default function Home() {
                 {/* 日历日期 */}
                 <motion.div variants={dateVariants} className={styles.calDateContainer}>
                   <div className={styles.calDate}>{date.date}</div>
-                  <div className={styles.calWeek}>{date.week}</div>
+                  <div className={styles.calWeek} style={date.date === 'Today' ? {display: 'none'} : {display: 'auto'}}>{date.week}</div>
                 </motion.div>
 
                 {/* 日历虚线框 */}
