@@ -24,84 +24,84 @@ export default function Home() {
 
   const dayTaskArr = [
     {
-      icon: '/src/assets/day_task_01.png',
+      icon: '/day_task_01.png',
       title: 'Go LIVE for 30 mins',
       currentProgress: 15,
       totalProgress: 30,
-      reward: '/src/assets/reward_gems.png',
+      reward: '/reward_gems.png',
       rewardText: '×10'
     },
     {
-      icon: '/src/assets/day_task_02.png',
+      icon: '/day_task_02.png',
       title: 'Receive 20 likes',
       currentProgress: 16,
       totalProgress: 20,
-      reward: '/src/assets/reward_gems.png',
+      reward: '/reward_gems.png',
       rewardText: '×10'
     }
   ]
 
   const weekTaskArr = [
     {
-      icon: '/src/assets/week_task_01.png',
+      icon: '/week_task_01.png',
       title: 'Complete “Go LIVE for 30 mins” for 3 times',
       currentProgress: 1,
       totalProgress: 3,
-      reward: '/src/assets/reward_card.png',
+      reward: '/reward_card.png',
       rewardText: '×10'
     },
     {
-      icon: '/src/assets/week_task_02.png',
+      icon: '/week_task_02.png',
       title: 'Complete “Receive 20 likes” for 5 times',
       currentProgress: 1,
       totalProgress: 5,
-      reward: '/src/assets/reward_card.png',
+      reward: '/reward_card.png',
       rewardText: '×10'
     },
     {
-      icon: '/src/assets/week_task_03.png',
+      icon: '/week_task_03.png',
       title: 'Go LIVE for 120 mins',
       currentProgress: 63,
       totalProgress: 120,
-      reward: '/src/assets/reward_gems.png',
+      reward: '/reward_gems.png',
       rewardText: '×10'
     },
     {
-      icon: '/src/assets/week_task_04.png',
+      icon: '/week_task_04.png',
       title: 'Receive 200 likes',
       currentProgress: 143,
       totalProgress: 200,
-      reward: '/src/assets/reward_gems.png',
+      reward: '/reward_gems.png',
       rewardText: '×10'
     },
     {
-      icon: '/src/assets/week_task_05.png',
+      icon: '/week_task_05.png',
       title: 'Receive 80 comments',
       currentProgress: 23,
       totalProgress: 80,
-      reward: '/src/assets/reward_gems.png',
+      reward: '/reward_gems.png',
       rewardText: '×10'
     },
     {
-      icon: '/src/assets/week_task_06.png',
+      icon: '/week_task_06.png',
       title: 'Collect 20 diamonds',
       currentProgress: 7,
       totalProgress: 20,
-      reward: '/src/assets/reward_gems.png',
+      reward: '/reward_gems.png',
       rewardText: '×10'
     },
   ]
 
   return (
     <div className={styles.content}>
-      <img className={styles.banner} src="/src/assets/vt-01.png" alt="" style={{ zIndex: 100 }} />
+      <img className={styles.banner} src="/vt-01.png" alt="" style={{ zIndex: 100 }} />
       <div className={styles.dialogContainer}>
 
         {/* header */}
         <div className={styles.headerContainer}>
           <h1>Manage your LIVE and win rewards!</h1>
           <div style={{ display: "flex" }}>
-            <img src="/src/assets/gem_1.png" alt="" style={{ width: 15, marginRight: 4 }} />
+            <img src="/gem_1.png" alt="" style={{ width: 15, marginRight: 4 }} />
             <div className={styles.headerSub}>300 gems in total · Get 150 more gems to unlock Flare card x2</div>
           </div>
         </div>
@@ -204,7 +204,7 @@ export default function Home() {
                   <div className={styles.goLiveContainer}>
                     <div className={styles.goLiveButton}>
                       <div>Go LIVE</div>
-                      <img src="/src/assets/goliveicon.png" alt="" className={styles.goLiveIcon} />
+                      <img src="/goliveicon.png" alt="" className={styles.goLiveIcon} />
                     </div>
                   </div>
                 </div>
@@ -249,7 +249,7 @@ export default function Home() {
                   <div className={styles.goLiveContainer}>
                     <div className={styles.goLiveButton}>
                       <div>Go LIVE</div>
-                      <img src="/src/assets/goliveicon.png" alt="" className={styles.goLiveIcon} />
+                      <img src="/goliveicon.png" alt="" className={styles.goLiveIcon} />
                     </div>
                   </div>
                 </div>
@@ -262,10 +262,10 @@ export default function Home() {
         {/* 月任务 */}
         <div className={styles.taskContainer} >
           <h2>This month</h2>
-          <img style={{ width: '100%' }} src="/src/assets/monthcard.png" alt="" />
+          <img style={{ width: '100%' }} src="/monthcard.png" alt="" />
         </div>
 
-        <img className={styles.banner} src="/src/assets/banner.png" alt="" />
+        <img className={styles.banner} src="/banner.png" alt="" />
       </div>
     </div>
 
