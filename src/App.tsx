@@ -10,7 +10,7 @@ export default function Home() {
   // const [hovered, setHovered] = useState(false);
   // 存储当前选中的日期 index
   // const [selectedIndex, setSelectedIndex] = useState(null);
-  const [selectedIndex, setSelectedIndex] = useState<number | null>(null);
+  
 
   const dates = [
     { date: 14, week: 'Sun', isSelected: false, isDone: true },
@@ -21,6 +21,11 @@ export default function Home() {
     { date: 19, week: 'Fri', isSelected: false, isDone: false },
     { date: 20, week: 'Sat', isSelected: false, isDone: false },
   ]
+
+  const [selectedIndex, setSelectedIndex] = useState<number | null>(() => {
+    const idx = dates.findIndex(d => d.date === "Today");
+    return idx >= 0 ? idx : null;
+  });
 
   const dayTaskArr = [
     {
@@ -149,7 +154,7 @@ export default function Home() {
                 {/* 日历日期 */}
                 <motion.div variants={dateVariants} className={styles.calDateContainer}>
                   <div className={styles.calDate}>{date.date}</div>
-                  <div className={styles.calWeek} style={date.date === 'Today' ? {display: 'none'} : {display: 'auto'}}>{date.week}</div>
+                  <div className={styles.calWeek} style={date.date === 'Today' ? { display: 'none' } : { display: 'block' }}>{date.week}</div>
                 </motion.div>
 
                 {/* 日历虚线框 */}
