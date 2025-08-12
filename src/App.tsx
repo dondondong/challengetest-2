@@ -48,7 +48,7 @@ export default function Home() {
       currentProgress: 1,
       totalProgress: 3,
       reward: '/reward_card.png',
-      rewardText: '×10'
+      rewardText: '×1'
     },
     {
       icon: '/week_task_02.png',
@@ -56,7 +56,7 @@ export default function Home() {
       currentProgress: 1,
       totalProgress: 5,
       reward: '/reward_card.png',
-      rewardText: '×10'
+      rewardText: '×1'
     },
     {
       icon: '/week_task_03.png',
@@ -64,7 +64,7 @@ export default function Home() {
       currentProgress: 63,
       totalProgress: 120,
       reward: '/reward_gems.png',
-      rewardText: '×10'
+      rewardText: '×50'
     },
     {
       icon: '/week_task_04.png',
@@ -72,7 +72,7 @@ export default function Home() {
       currentProgress: 143,
       totalProgress: 200,
       reward: '/reward_gems.png',
-      rewardText: '×10'
+      rewardText: '×50'
     },
     {
       icon: '/week_task_05.png',
@@ -80,7 +80,7 @@ export default function Home() {
       currentProgress: 23,
       totalProgress: 80,
       reward: '/reward_gems.png',
-      rewardText: '×10'
+      rewardText: '×50'
     },
     {
       icon: '/week_task_06.png',
@@ -88,7 +88,7 @@ export default function Home() {
       currentProgress: 7,
       totalProgress: 20,
       reward: '/reward_gems.png',
-      rewardText: '×10'
+      rewardText: '×50'
     },
   ]
 
