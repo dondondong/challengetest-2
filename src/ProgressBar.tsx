@@ -5,7 +5,7 @@ import styles from "./home.module.css";
 export default function ProgressBar({
     progress = 0.6, // 0~1
 }) {
-    const bgRef = useRef(null);
+    const bgRef = useRef<HTMLDivElement | null>(null);
     const widthPx = useMotionValue(0);
 
     const p = Math.max(0, Math.min(1, progress));

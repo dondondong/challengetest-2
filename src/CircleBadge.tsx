@@ -1,13 +1,20 @@
-import { motion } from "framer-motion";
+import { motion, type Variants } from "framer-motion";
+
+type CircleBadgeProps = {
+  size: number;
+  color?: string;
+  doneColor?: string;
+  variant?: "empty" | "number" | "check";
+  isDone?: boolean;
+  strokeWidth?: number;       // 你在 App 里有传
+  hoverStrokeWidth?: number;  // 你在 App 里有传
+  customVariants?: Variants;  // 外部传入 variants
+};
 
 export default function CircleBadge({
   size,
-  color,
-  doneColor = "#ffffff",
-  variant = "empty",
-  isDone = false,
   customVariants,
-}) {
+}: CircleBadgeProps) {
   const r = (size - 10) / 2;
   const cx = size / 2;
   const cy = size / 2;

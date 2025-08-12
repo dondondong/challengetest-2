@@ -1,15 +1,16 @@
 import { useState } from "react"
 import styles from "./home.module.css"
-import { motion, progress } from "framer-motion";
+import { motion } from "framer-motion";
 import CircleBadge from "./CircleBadge.js";
 import ProgressBar from "./ProgressBar.js";
-import { div, style, title } from "framer-motion/client";
+// import { div, style, title } from "framer-motion/client";
 
 export default function Home() {
   // const [calHovered, setCalHovered] = useState(false)
-  const [hovered, setHovered] = useState(false);
+  // const [hovered, setHovered] = useState(false);
   // 存储当前选中的日期 index
-  const [selectedIndex, setSelectedIndex] = useState(null);
+  // const [selectedIndex, setSelectedIndex] = useState(null);
+  const [selectedIndex, setSelectedIndex] = useState<number | null>(null);
 
   const dates = [
     { date: 14, week: 'Sun', isSelected: false, isDone: true },
@@ -174,7 +175,7 @@ export default function Home() {
         }}>
           <h2>Today</h2>
           <div className={styles.taskGridContainer}>
-            {dayTaskArr.map((task, index) => {
+            {dayTaskArr.map((task) => {
               return (
                 <div
                   key={`${task.title}`}
