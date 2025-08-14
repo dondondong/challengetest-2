@@ -4,7 +4,7 @@
     background-color: black;
 }
 
-.content{
+.content {
     position: relative;
     width: 1018px;
     height: 700px;
@@ -95,7 +95,7 @@ body {
     flex-direction: row;
     justify-content: space-between;
     width: 100%;
-    margin-bottom: 40px;
+    margin-bottom: 28px;
 }
 
 .calItem {
@@ -126,7 +126,7 @@ body {
     width: 100%;
     font-style: normal;
     justify-content: center;
-    font-weight: 600;
+    font-weight: 500;
     line-height: 16px;
     gap: 3px;
     margin-bottom: 4px;
@@ -145,7 +145,7 @@ body {
 }
 
 .calWeek {
-    font-size: 12px;
+    font-size: 13px;
 }
 
 .calCircle {}
@@ -173,15 +173,22 @@ body {
 
 .taskItem {
     display: flex;
+    box-sizing: border-box;
     overflow: hidden;
     position: relative;
-    padding: 20px;
-    align-items: top;
+    padding: 20px 20px;
+    align-items: center;
     /* width: 100%; */
+    /* min-height: 70px; */
     max-height: 80px;
     background: rgba(255, 255, 255, 0.02);
     border-radius: 12px;
     transition: background-color 0.15s ease-in-out;
+}
+
+.taskItemInner {
+    display: flex;
+    width: 100%;
 }
 
 .taskItem:hover {
@@ -245,6 +252,7 @@ body {
 
 .progressContainer {
     display: flex;
+    align-items: center;
 }
 
 .progressBarBg {
@@ -318,4 +326,189 @@ body {
     line-height: 16px;
     font-feature-settings: 'tnum' on, 'lnum' on;
     color: rgba(255, 255, 255, 0.5);
+}
+
+.taskCheck {
+    width: 14px;
+    height: 14px;
+    margin-right: 4px;
+}
+
+.progressText {
+    color: rgba(255, 255, 255, .5);
+    font-weight: 300;
+    line-height: 20px;
+    font-size: 13px;
+    font-feature-settings: 'tnum' on, 'lnum' on;
+}
+
+.futurePlaceholder {
+    min-height: 16px;
+}
+
+.dynamicModule {
+    width: 100%;
+    box-sizing: border-box;
+    padding: 24px 0;
+    margin-bottom: 36px;
+    background: rgba(0, 0, 0, 0.01);
+    box-shadow: 0px 1px 0px rgba(255, 255, 255, 0.04), 0px -1px 0px rgba(255, 255, 255, 0.04);
+}
+
+.dynamicModuleContainer {
+    display: flex;
+    position: relative;
+    width: 100%;
+    align-items: start;
+}
+
+.dynamicModuleIconContainer {
+    position: relative;
+    width: 16px;
+    height: 18px;
+    margin-right: 6px;
+}
+
+.liveTipsIcon {
+    position: absolute;
+    left: 1px;
+    bottom: 3px;
+    width: 14px;
+    height: 17px;
+}
+
+.liveTipsContent {
+    display: flex;
+    flex: 1;
+    line-height: 18px;
+    color: rgba(255, 255, 255, .92);
+}
+
+.liveTipsTitle {
+    font-size: 14px;
+    font-weight: 500;
+    margin-right: 4px;
+}
+
+.liveTipsText {
+    font-size: 14px;
+}
+
+.liveTipsCancelIcon {
+    width: 20px;
+    height: 20px;
+}
+
+.summaryContainer {
+    display: flex;
+    width: 100%;
+}
+
+.summaryContent {
+    flex: 1;
+}
+
+.summaryTitle {
+    font-size: 14px;
+    line-height: 18px;
+    font-weight: 500;
+    color: rgba(255, 255, 255, .92);
+    margin-bottom: 6px;
+}
+
+.summaryText {
+    font-size: 13px;
+    line-height: 16px;
+    font-weight: 400;
+    color: rgba(255, 255, 255, .5);
+}
+
+.summaryTextHighlight {
+    margin: 0 4px;
+    font-size: 14px;
+    line-height: 18px;
+    font-weight: 500;
+    color: rgba(255, 255, 255, .92);
+}
+
+.liveEventContent {
+    flex: 1;
+}
+
+.liveEventTitle {
+    font-size: 14px;
+    line-height: 18px;
+    font-weight: 500;
+    color: rgba(255, 255, 255, .92);
+    margin-bottom: 6px;
+}
+
+.liveEventText {
+    font-size: 13px;
+    line-height: 16px;
+    font-weight: 400;
+    color: rgba(255, 255, 255, .5);
+}
+
+.iconButtonContainer {
+    display: flex;
+    position: absolute;
+    top: -6px;
+    right: 0;
+    box-sizing: border-box;
+    padding: 8px 8px 8px 12px;
+    height: fit-content;
+    border-radius: 8px;
+    align-items: center;
+    font-size: 13px;
+    line-height: 16px;
+    font-weight: 500;
+    color: rgba(255, 255, 255, .92);
+    background-color: rgba(255, 255, 255, 0);
+    transition: background-color 0.15s ease-out;
+}
+
+.buttonIcon {
+    margin-left: 2px;
+    width: 14px;
+    height: 14px;
+}
+
+.iconButtonContainer:hover {
+    cursor: pointer;
+    background-color: rgba(255, 255, 255, .05);
+}
+
+.iconButtonContainer:active {
+    cursor: pointer;
+    background-color: rgba(255, 255, 255, .1);
+}
+
+/* 外层容器：用 height 过渡来自然撑高 */
+.stackOuter {
+    overflow: hidden;
+    /* 防止切换时内容溢出 */
+    transition: height 260ms ease;
+    /* 可按需改为 cubic-bezier/spring 插值 */
+}
+
+/* 建议：图片固定尺寸，避免加载改变高度导致抖动 */
+/* .taskImg { width: 56px; height: 56px; object-fit: contain; } */
+/* .taskRewardImg { width: 16px; height: 16px; } */
+
+/* 可选：只是占位，没动画要求的话不需要额外样式 */
+.stackOuterAuto {
+    /* height: auto; */
+    transition: height 0.15s ease-in-out;
+    /* 外层什么都不用做，让文档流自然撑高 */
+}
+
+.dayStack {
+    transition: height 0.15s ease-in-out;
+    /* 每一天的内容容器 */
+}
+
+.stackOuter {
+  overflow: hidden;
+  transition: height 300ms ease;
 }
