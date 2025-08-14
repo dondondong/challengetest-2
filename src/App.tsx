@@ -1,4 +1,4 @@
-import { useMemo, useState, useRef, useLayoutEffect, useEffect } from "react";
+import { useMemo, useState, useRef, useEffect } from "react";
 import styles from "./home.module.css";
 import {
   AnimatePresence,
@@ -81,8 +81,6 @@ export default function Home() {
   const weekY = useMotionValue(0);
   const monthY = useMotionValue(0);
 
-  const followSpring: Transition = { type: "spring", stiffness: 500, damping: 40 };
-
   // 首次渲染记录高度，避免第一帧跳动
   // useLayoutEffect(() => {
   //   if (stackInnerRef.current) {
@@ -95,8 +93,8 @@ export default function Home() {
   useEffect(() => {
     if (!stackInnerRef.current) return;
     const newH = stackInnerRef.current.getBoundingClientRect().height;
-    const oldH = prevHeightRef.current || newH;
-    const delta = newH - oldH; // 变矮 => 正，变高 => 负
+    // const oldH = prevHeightRef.current || newH;
+    // const delta = newH - oldH; // 变矮 => 正，变高 => 负
     // console.log('deleta' + delta)
     // 让 week/month 先抵消这段高度差，再顺滑回 0
     weekY.set(0);
