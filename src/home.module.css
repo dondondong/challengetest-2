@@ -129,7 +129,7 @@ body {
     font-weight: 500;
     line-height: 16px;
     gap: 3px;
-    margin-bottom: 4px;
+    margin-bottom: 6px;
     /* identical to box height, or 123% */
     display: flex;
     align-items: center;
@@ -444,10 +444,13 @@ body {
 }
 
 .liveEventText {
+    align-items: center;
+    display: flex;
     font-size: 13px;
     line-height: 16px;
     font-weight: 400;
     color: rgba(255, 255, 255, .5);
+    font-feature-settings: 'tnum' on, 'lnum' on;
 }
 
 .iconButtonContainer {
