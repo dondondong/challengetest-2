@@ -74,7 +74,7 @@ export default function DynamicModule({ status, dateId, text }: Props) {
                             {text} on {dateId}!
                         </div>
                         <div className={styles.liveEventText}>
-                            Earn 10 points by setting a LIVE Event and go LIVE for 30mins on this date
+                            <span>Earn</span><img style={{ width: 16, height: 16, margin: '0 0 0 4px' }} src="/gem_2.png" alt="" /> <span style={{ color: 'rgba(255,255,255,.92)', fontSize: 12, marginRight: 6 }}>x10</span> <span>by setting a LIVE Event and go LIVE for 30mins on this date.</span>
                         </div>
                     </div>
                     <div className={styles.iconButtonContainer}>
